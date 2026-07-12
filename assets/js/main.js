@@ -1,4 +1,4 @@
-/* Bloom — interactions */
+/* Naqsh — interactions */
 (function(){
   var burger=document.querySelector('.burger');
   if(burger){ burger.addEventListener('click',function(){ document.body.classList.toggle('mobile-open'); }); }
