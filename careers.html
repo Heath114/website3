@@ -45,7 +45,7 @@
       <div class="perk" data-r><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"/></svg><h3>A budget to grow</h3><p>A yearly learning budget for courses, conferences and tools - plus time to actually use it.</p></div>
       <div class="perk" data-r><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><h3>A real studio</h3><p>A beautiful space in Weibdeh, good coffee, better people, and a dog called Pixel.</p></div>
       <div class="perk" data-r><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg><h3>Health, covered</h3><p>Private medical cover for you, and support for the things that matter outside work too.</p></div>
-      <div class="perk" data-r><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg><h3>Flexible & hybrid</h3><p>Three days in the studio, two wherever you do your best work. We trust adults to manage their time.</p></div>
+      <div class="perk" data-r><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg><h3>Flexible &amp; hybrid</h3><p>Three days in the studio, two wherever you do your best work. We trust adults to manage their time.</p></div>
     </div>
   </div>
 </section>
@@ -55,16 +55,16 @@
   <div class="wrap">
     <div class="sec-head"><div><span class="mono" data-r>Open positions</span><h2 data-r style="margin-top:14px">We're hiring</h2></div><p data-r style="color:rgba(251,250,247,.66)">Don't see your role? Send us your portfolio anyway - we keep good people in mind.</p></div>
     <div style="border-top:1px solid rgba(251,250,247,.16)">
-      <div class="job" data-r style="border-color:rgba(251,250,247,.16)"><div><h3>Senior Brand Designer</h3></div><div class="d">Full-time · Amman</div><div class="d">Design</div><button class="btn" data-apply style="background:var(--red);border-color:var(--red)">Apply</button></div>
-      <div class="job" data-r style="border-color:rgba(251,250,247,.16)"><div><h3>Front-end Developer</h3></div><div class="d">Full-time · Hybrid</div><div class="d">Engineering</div><button class="btn" data-apply style="background:var(--red);border-color:var(--red)">Apply</button></div>
-      <div class="job" data-r style="border-color:rgba(251,250,247,.16)"><div><h3>Motion Designer</h3></div><div class="d">Contract · Remote</div><div class="d">Design</div><button class="btn" data-apply style="background:var(--red);border-color:var(--red)">Apply</button></div>
-      <div class="job" data-r style="border-color:rgba(251,250,247,.16);border-bottom:1px solid rgba(251,250,247,.16)"><div><h3>Design Internship</h3></div><div class="d">6 months · Amman</div><div class="d">Design</div><button class="btn" data-apply style="background:var(--red);border-color:var(--red)">Apply</button></div>
+      <div class="job" data-r style="border-color:rgba(251,250,247,.16)"><div><h3>Senior Brand Designer</h3></div><div class="d">Full-time · Amman</div><div class="d">Design</div><button class="btn" data-apply="Senior Brand Designer" style="background:var(--red);border-color:var(--red)">Apply</button></div>
+      <div class="job" data-r style="border-color:rgba(251,250,247,.16)"><div><h3>Front-end Developer</h3></div><div class="d">Full-time · Hybrid</div><div class="d">Engineering</div><button class="btn" data-apply="Front-end Developer" style="background:var(--red);border-color:var(--red)">Apply</button></div>
+      <div class="job" data-r style="border-color:rgba(251,250,247,.16)"><div><h3>Motion Designer</h3></div><div class="d">Contract · Remote</div><div class="d">Design</div><button class="btn" data-apply="Motion Designer" style="background:var(--red);border-color:var(--red)">Apply</button></div>
+      <div class="job" data-r style="border-color:rgba(251,250,247,.16);border-bottom:1px solid rgba(251,250,247,.16)"><div><h3>Design Internship</h3></div><div class="d">6 months · Amman</div><div class="d">Design</div><button class="btn" data-apply="Design Internship" style="background:var(--red);border-color:var(--red)">Apply</button></div>
     </div>
   </div>
 </section>
 
 <!-- APPLY -->
-<section>
+<section id="apply">
   <div class="wrap cgrid">
     <div data-r>
       <span class="mono">General application</span>
@@ -72,13 +72,13 @@
       <p style="color:var(--grey);font-size:17px">Tell us who you are and leave a link to your work. We read everything, and we reply to everyone - even when it's a no.</p>
     </div>
     <div data-r>
-      <form data-form>
+      <form data-form id="apply-form">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <div class="field"><label>Name</label><input type="text" required></div>
           <div class="field"><label>Email</label><input type="email" required></div>
         </div>
         <div class="field"><label>Role you're after</label>
-          <select><option>Senior Brand Designer</option><option>Front-end Developer</option><option>Motion Designer</option><option>Design Internship</option><option>Something else</option></select>
+          <select data-role-select><option>Senior Brand Designer</option><option>Front-end Developer</option><option>Motion Designer</option><option>Design Internship</option><option>Something else</option></select>
         </div>
         <div class="field"><label>Portfolio / link</label><input type="url" placeholder="https://"></div>
         <div class="field"><label>A few words about you</label><textarea rows="4"></textarea></div>
@@ -94,7 +94,7 @@
     <div class="foot-top">
       <div class="foot-brand"><span class="brand-word">Naqsh<b style="color:var(--red)">.</b></span><p>Independent brand and digital design studio. Jabal Al Weibdeh, Amman, Jordan.</p></div>
       <div class="foot-col"><h4>Studio</h4><a href="work.html">Work</a><a href="studio.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div>
-      <div class="foot-col"><h4>Services</h4><a href="work.html">Brand identity</a><a href="work.html">Web & digital</a><a href="work.html">Product design</a><a href="work.html">Art direction</a></div>
+      <div class="foot-col"><h4>Services</h4><a href="work.html">Brand identity</a><a href="work.html">Web &amp; digital</a><a href="work.html">Product design</a><a href="work.html">Art direction</a></div>
       <div class="foot-col"><h4>Elsewhere</h4><a href="https://instagram.com/naqsh.studio" target="_blank" rel="noopener">Instagram</a><a href="https://behance.net/naqshstudio" target="_blank" rel="noopener">Behance</a><a href="https://linkedin.com/company/naqsh-studio" target="_blank" rel="noopener">LinkedIn</a><a href="https://dribbble.com/naqshstudio" target="_blank" rel="noopener">Dribbble</a></div>
     </div>
     <div class="foot-bottom"><span>© <span data-year>2026</span> Naqsh Studio, Amman. All rights reserved.</span><span>hello@naqsh.studio · +962 6 200 5540</span></div>

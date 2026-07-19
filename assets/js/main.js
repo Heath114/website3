@@ -8,11 +8,25 @@
   },{threshold:.1,rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('[data-r]').forEach(function(el,i){ el.style.transitionDelay=(i%2)*0.08+'s'; io.observe(el); });
 
-  // apply buttons -> feedback
+  // apply buttons -> jump to the application form and preselect the role
   document.addEventListener('click',function(e){
     var a=e.target.closest('[data-apply]');
     if(!a) return; e.preventDefault();
-    a.textContent='Application started ✓';
+
+    var role=a.getAttribute('data-apply');
+    var form=document.getElementById('apply-form');
+    if(!form){ return; }
+
+    var select=form.querySelector('[data-role-select]');
+    if(select && role){
+      for(var i=0;i<select.options.length;i++){
+        if(select.options[i].text===role){ select.selectedIndex=i; break; }
+      }
+    }
+
+    form.scrollIntoView({behavior:'smooth',block:'center'});
+    var firstInput=form.querySelector('input,textarea');
+    if(firstInput){ setTimeout(function(){ firstInput.focus({preventScroll:true}); },500); }
   });
 
   document.querySelectorAll('form[data-form]').forEach(function(f){
