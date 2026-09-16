@@ -154,6 +154,35 @@ footer{background:var(--ink);color:#b9b6ad;padding:80px 0 34px}
 [data-r]{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 [data-r].in{opacity:1;transform:none}
 
+/* motion kinds (set by main.js); each replaces the generic reveal above */
+[data-r][data-m]{opacity:1;transform:none;transition:none}
+[data-m="fade"]{opacity:0!important;transform:translateY(12px)!important;transition:opacity .8s var(--ease) var(--d),transform .8s var(--ease) var(--d)!important}
+[data-m="fade"].in{opacity:1!important;transform:none!important}
+[data-m="slide"]{opacity:0!important;transform:translateX(-16px)!important;transition:opacity .7s var(--ease) var(--d),transform .7s var(--ease) var(--d)!important}
+[data-m="slide"].in{opacity:1!important;transform:none!important}
+.wi-o{display:inline-block;overflow:hidden;vertical-align:top;padding:.06em 0 .1em;margin:-.06em 0 -.1em}
+.wi{display:inline-block;transform:translateY(115%);transition:transform 1s var(--ease)}
+[data-m="words"].in .wi{transform:none}
+.iw{opacity:.13;transition:opacity .4s ease}
+.iw.on{opacity:1}
+[data-m="clip"] .wcard-media,[data-m="clip"] .m-media{clip-path:inset(100% 0 0 0);transition:clip-path 1.2s var(--ease) var(--d)}
+[data-m="clip"].in .wcard-media,[data-m="clip"].in .m-media{clip-path:inset(0 0 0 0)}
+[data-m="clip"] .wcard-head,[data-m="clip"] .tags,[data-m="clip"] .wcard-link>p,[data-m="clip"]>h3,[data-m="clip"]>p{opacity:0;transform:translateY(10px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--d) + .4s)}
+[data-m="clip"].in .wcard-head,[data-m="clip"].in .tags,[data-m="clip"].in .wcard-link>p,[data-m="clip"].in>h3,[data-m="clip"].in>p{opacity:1;transform:none}
+img[data-m="clip-x"],figure[data-m="clip-x"] img{clip-path:inset(0 100% 0 0);transition:clip-path 1.3s var(--ease) var(--d)}
+img[data-m="clip-x"].in,figure[data-m="clip-x"].in img{clip-path:inset(0 0 0 0)}
+figure[data-m="clip-x"] figcaption{opacity:0;transition:opacity .6s ease calc(var(--d) + .7s)}
+figure[data-m="clip-x"].in figcaption{opacity:1}
+[data-m="row"]{position:relative}
+[data-r][data-m="row"]{transition:padding-left .4s var(--ease),background .3s}
+[data-m="row"]::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:currentColor;opacity:.35;transform:scaleX(0);transform-origin:left;transition:transform 1.1s var(--ease) var(--d)}
+[data-m="row"].in::before{transform:scaleX(1)}
+[data-m="row"]>*{opacity:0;transform:translateX(-22px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--d) + .2s)}
+[data-m="row"].in>*{opacity:1;transform:none}
+[data-m="count"]{opacity:0!important;transition:opacity .6s ease var(--d)!important}
+[data-m="count"].in{opacity:1!important}
+@media (prefers-reduced-motion: reduce){[data-r]{opacity:1!important;transform:none!important;transition:none!important}}
+
 @media(max-width:1000px){
   .work-grid,.hero-foot,.cgrid,.jgrid{grid-template-columns:1fr}
   .team-grid,.perks{grid-template-columns:repeat(2,1fr)}
