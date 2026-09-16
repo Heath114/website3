@@ -1,7 +1,6 @@
-# Bloom
+# Naqsh
 
 Independent brand and digital design studio in Jabal Al Weibdeh, Amman.
-We build identities, websites and digital products for companies that would
-rather not blend in.
+Identities, websites and digital products.
 
-Static site — HTML, CSS and vanilla JavaScript. No build step.
+Static site: HTML, CSS and vanilla JavaScript, no build step.
