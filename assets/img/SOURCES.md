@@ -12,3 +12,8 @@ Replacement photos added 2026-09-16. All CC0 (no attribution required).
 - `work-4.jpg`: stocksnap, CC0, https://stocksnap.io/photo/wooden-chair-0DH6S6OU6Q
 - `work-5.jpg`: rawpixel, CC0, https://www.rawpixel.com/image/3337957/free-photo-image-bottle-alcoholic-beverage-alcohol
 - `studio-3.jpg`: existing studio photo, cropped to remove a bookshelf with brand-name book spines and a monitor logo painted out (2026-09-16)
+
+## Portfolio images (assets/img/work/)
+All 32 project images are original designs made for this site in HTML/CSS and rendered with `_design/render.py`.
+Edit the brand definitions in `_design/brands.py`, `boards.py` and `covers.py`, then re-render. Case study copy lives in `_design/cases.py`; regenerate pages with `python3 _design/pages.py`.
+Some covers embed photos already listed above (work-1, work-3, work-4, proj-2, proj-3, studio-2).

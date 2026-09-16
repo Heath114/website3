@@ -172,3 +172,67 @@ footer{background:var(--ink);color:#b9b6ad;padding:80px 0 34px}
   .team-grid,.perks,.foot-top{grid-template-columns:1fr}
   .mobile-open .nav-links{display:flex;position:absolute;top:80px;left:0;right:0;flex-direction:column;background:var(--bg);padding:24px 22px;gap:18px;border-bottom:1px solid var(--line)}
 }
+
+/* case study pages */
+.case-hero{padding:56px 0 64px}
+.case-back{display:inline-block;margin-bottom:34px;transition:color .3s}
+.case-back:hover{color:var(--red)}
+.case-title{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.case-title h1{font-size:clamp(46px,8.5vw,128px);margin:0}
+.case-ar{font-family:"Readex Pro",var(--sans);font-weight:600;font-size:clamp(36px,5vw,72px);color:var(--red);line-height:1.2}
+.case-hero .lede{font-size:clamp(19px,2vw,24px);color:var(--ink);max-width:48ch;margin-top:30px}
+.case-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.case-meta dt{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+.case-meta dd{font-size:15.5px;line-height:1.6}
+.case-media{padding:0 0 44px}
+.case-media.first{padding-top:56px}
+.case-media img{width:100%;border-radius:6px;background:var(--soft)}
+.case-media figcaption{margin-top:14px}
+.case-text{padding:76px 0 100px}
+.case-cols{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.case-cols .mono{display:block;color:var(--red);margin-bottom:18px}
+.case-cols p{font-size:19px;line-height:1.65}
+.case-stats{padding:40px 0 90px}
+.case-quote{padding:80px 0 120px}
+.case-quote blockquote{font-family:var(--disp);font-weight:800;font-size:clamp(28px,4vw,54px);line-height:1.08;text-transform:uppercase;letter-spacing:-.02em}
+.case-quote .mono{margin-top:26px}
+.case-next{display:block;background:var(--ink);color:var(--paper);padding:80px 0;overflow:hidden}
+.case-next .mono{color:#8a8780}
+.case-next-row{display:flex;align-items:center;justify-content:space-between;gap:40px;margin-top:18px}
+.case-next h2{font-size:clamp(40px,7vw,104px);transition:color .4s var(--ease)}
+.case-next img{width:min(360px,36%);aspect-ratio:4/3;object-fit:cover;border-radius:4px;transition:transform .8s var(--ease)}
+.case-next:hover h2{color:var(--red)}
+.case-next:hover img{transform:scale(1.04) rotate(-1.5deg)}
+.wcard a.wcard-link{display:block}
+.team-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){
+  .case-meta{grid-template-columns:1fr 1fr}
+  .case-cols{grid-template-columns:1fr;gap:40px}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .case-next-row{flex-direction:column;align-items:flex-start}
+  .case-next img{width:100%}
+  .team-grid{grid-template-columns:1fr}
+}
+
+/* expandable capability rows */
+.srow-x{cursor:pointer}
+.srow-x .plus{transition:transform .45s var(--ease)}
+.srow-x.open .plus{transform:rotate(45deg)}
+.srow-more{grid-column:2/-1;display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.srow-more>div{overflow:hidden}
+.srow-x.open .srow-more{grid-template-rows:1fr}
+.srow-more ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding-top:6px}
+.srow-more li{border:1px solid rgba(251,250,247,.22);border-radius:100px;padding:8px 16px;font-size:14px;color:rgba(251,250,247,.85)}
+.srow-cases{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:18px;font-size:14px;color:rgba(251,250,247,.55)}
+.srow-cases a{color:var(--paper);border-bottom:1.5px solid var(--red);padding-bottom:2px}
+.srow-cases a:hover{color:var(--red)}
+.srow-x:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+@media(max-width:1000px){.srow-more{grid-column:1/-1}}
+.brand-ar{display:inline-block;margin-left:14px;font-family:"Readex Pro",var(--sans);font-weight:600;font-size:26px;color:var(--red);vertical-align:6px}
+.hero-ar{font-family:"Readex Pro",var(--sans);font-weight:600;font-size:15px;letter-spacing:0;color:var(--red)}
+/* covers put the client lockup top-left, so the index badge sits top-right */
+.wcard-media .idx{left:auto;right:16px}
+.case-stats .stats{grid-template-columns:repeat(3,1fr)}
+@media(max-width:640px){.case-stats .stats{grid-template-columns:1fr 1fr}}

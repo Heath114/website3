@@ -8,6 +8,13 @@
   },{threshold:.1,rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('[data-r]').forEach(function(el,i){ el.style.transitionDelay=(i%2)*0.08+'s'; io.observe(el); });
 
+  // capability rows expand to show deliverables and related case studies
+  function toggleRow(row){ var open=row.classList.toggle('open'); row.setAttribute('aria-expanded',open); }
+  document.querySelectorAll('.srow-x').forEach(function(row){
+    row.addEventListener('click',function(e){ if(!e.target.closest('a')) toggleRow(row); });
+    row.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggleRow(row); } });
+  });
+
   // apply buttons -> jump to the application form and preselect the role
   document.addEventListener('click',function(e){
     var a=e.target.closest('[data-apply]');
